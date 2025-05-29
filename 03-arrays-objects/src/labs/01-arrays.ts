@@ -7,3 +7,15 @@
  */
 
 // TODO: users 배열 선언 및 위 조건 처리
+let users: string[];
+users = ["eunji", "minsu", "sora"];
+
+console.log(users);
+
+let filteredUsers = users.filter((s) => s.length <= 4);
+
+console.log(filteredUsers);
+
+let upperUsers = users.map((s) => s.toUpperCase());
+
+console.log(upperUsers);

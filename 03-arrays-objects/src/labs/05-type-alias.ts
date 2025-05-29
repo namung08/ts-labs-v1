@@ -7,3 +7,36 @@
  */
 
 // TODO: Lecture 타입, lectures 배열, popularLectures, titleList 완성
+type Lecture = {
+  title: string;
+  instructor: string;
+  students: number;
+};
+
+let lectures: Lecture[] = [
+  {
+    title: "TypeScript 기초",
+    instructor: "김강사",
+    students: 45,
+  },
+  {
+    title: "React 실전 프로젝트",
+    instructor: "이강사",
+    students: 28,
+  },
+  {
+    title: "Node.js 서버 개발",
+    instructor: "박강사",
+    students: 35,
+  },
+];
+
+let popularLectures = lectures.filter((l: Lecture) => l.students >= 30)
+
+console.log(popularLectures);
+
+let titleList = lectures.map((l: Lecture) => l.title);
+
+console.log(titleList);
+
+

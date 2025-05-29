@@ -6,3 +6,27 @@
  */
 
 // TODO: Book 타입, books 배열, availableBooks 필터링
+type Book = {
+  title: string;
+  author: string;
+  publishedYear: Date;
+  isAvailable: boolean;
+};
+
+let books: Book[] = [
+  {
+    title: "TypeScript 프로그래밍",
+    author: "김개발",
+    publishedYear: new Date("2023-01-15"),
+    isAvailable: true,
+  },
+  {
+    title: "자바스크립트 완벽 가이드",
+    author: "이코딩",
+    publishedYear: new Date("2022-06-20"),
+    isAvailable: false,
+  },
+];
+
+let availableBooks = books.filter((b: Book) => b.isAvailable);
+console.log(availableBooks);

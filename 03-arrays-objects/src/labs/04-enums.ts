@@ -8,3 +8,39 @@
  */
 
 // TODO: OrderStatus enum, Order 타입, orders 배열, shippedOrders 추출
+enum OrderStatus {
+  PENDING,
+  SHIPPED,
+  DELIVERED,
+  CANCELLED,
+}
+
+type Order = {
+  id: number;
+  status: OrderStatus;
+  item: string;
+};
+
+let orders: Order[] = [
+  {
+    id: 1,
+    status: OrderStatus.PENDING,
+    item: "노트북",
+  },
+  {
+    id: 2,
+    status: OrderStatus.SHIPPED,
+    item: "스마트폰",
+  },
+  {
+    id: 3,
+    status: OrderStatus.DELIVERED,
+    item: "헤드폰",
+  },
+];
+
+let shippedOrders = orders.filter(
+  (o: Order) => o.status === OrderStatus.SHIPPED
+);
+
+console.log(shippedOrders);
