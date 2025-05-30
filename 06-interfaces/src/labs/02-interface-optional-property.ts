@@ -6,11 +6,19 @@
 const leeProfile = { username: "이유저" };
 const parkProfile = { username: "박유저", email: "parkuser@blog.com" };
 
+interface BlogUserInfo {
+  username: string;
+  email?: string;
+}
+
 // 아래 함수 showProfile에 Profile 타입을 적용하고, email이 있으면 "이메일: xxx", 없으면 "이메일 없음"이 출력되게 하라.
-function showProfile(profile) {
+function showProfile(profile: BlogUserInfo) {
   if (profile.email) {
     console.log("이메일:", profile.email);
   } else {
     console.log("이메일 없음");
   }
 }
+
+showProfile(leeProfile);
+showProfile(parkProfile)
