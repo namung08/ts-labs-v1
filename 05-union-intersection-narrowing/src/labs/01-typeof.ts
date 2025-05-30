@@ -3,8 +3,14 @@
 
 function handleInput(input: string | number) {
   // 여기에 코드를 작성하세요.
+  if (typeof input === "string") {
+    return input.trim().toUpperCase();
+  }
+  return (input *= input *= input);
 }
 
 // 사용 예시
-// handleInput("hello"); // "HELLO"
-// handleInput(2); // 8
+console.log(handleInput("hello"));
+// "HELLO"
+console.log(handleInput(2));
+// 8
