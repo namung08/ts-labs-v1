@@ -17,8 +17,14 @@
  */
 
 // TODO: 여기에 getLastElement 함수를 작성하세요.
-
+function getLastElement<T>(list: T[]): T | undefined {
+  return list.length ? list[list.length - 1] : undefined;
+}
 // 아래 코드를 복사해 결과를 확인해 보세요.
-const n = getLastElement([1, 2, 3]); // 3
-const w = getLastElement(["a", "b"]); // 'b'
-const e = getLastElement([]); // undefined
+const ns = getLastElement([1, 2, 3]); // 3
+const ws = getLastElement(["a", "b"]); // 'b'
+const es = getLastElement([]); // undefined
+
+console.log(ns);
+console.log(ws);
+console.log(es);

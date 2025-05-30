@@ -16,7 +16,12 @@
  */
 
 // TODO: 여기에 swap 함수를 작성하세요.
-
+function swap<A, B>(x: A, y: B): [B, A] {
+  return [y, x];
+}
 // 아래 코드를 복사해 결과를 확인해 보세요.
 const swapped1 = swap(1, "hello"); // ['hello', 1]
 const swapped2 = swap(true, [1, 2]); // [[1, 2], true]
+
+console.log(swapped1);
+console.log(swapped2);
