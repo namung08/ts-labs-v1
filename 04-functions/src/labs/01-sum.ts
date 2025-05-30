@@ -6,3 +6,9 @@
 예시)
 sum([1, 2, 3]) // 6
 */
+
+const sums = (numbers: number[]) => {
+  return numbers.reduce((pre, cur) => pre + cur, 0);
+};
+
+console.log(sums([1, 2, 4, 8, 16]));

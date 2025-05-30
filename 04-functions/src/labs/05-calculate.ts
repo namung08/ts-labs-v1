@@ -8,3 +8,17 @@
 const add = (a: number, b: number) => a + b;
 calculate(10, 20, add) // 30
 */
+type operation = (x: number, y: number) => number;
+const calculate = (x: number, y: number, operation: operation) => {
+  return operation(x, y);
+};
+
+const add = (a: number, b: number) => a + b;
+const divide = (a: number, b: number) => a / b;
+const minus = (a: number, b: number) => a - b;
+const multi = (a: number, b: number) => a * b;
+
+console.log(calculate(1, 2, add));
+console.log(calculate(1, 2, minus));
+console.log(calculate(1, 2, multi));
+console.log(calculate(1, 2, divide));
